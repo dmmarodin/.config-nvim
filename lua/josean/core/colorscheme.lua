@@ -2,44 +2,22 @@
 --   theme = "dark",
 --   borders = true,
 -- })
+--
 
+local catppuccin = require("catppuccin")
 
-require("catppuccin").setup({
- flavour = "mocha", -- latte, frappe, macchiato, mocha
-    background = { -- :h background
-        light = "latte",
-        dark = "mocha",
-    },
-    compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
-    transparent_background = false,
-    term_colors = false,
-    dim_inactive = {
-        enabled = false,
-        shade = "dark",
-        percentage = 0.15,
-    },
-    styles = {
-        comments = { "italic" },
-        conditionals = { "italic" },
-        loops = {},
-        functions = {},
-        keywords = {},
-        strings = {},
-        variables = {},
-        numbers = {},
-        booleans = {},
-        properties = {},
-        types = {},
-        operators = {},
-    },
-    color_overrides = {},
-    custom_highlights = {},
-    integrations = {
-        cmp = true,
-        gitsigns = true,
-        nvimtree = true,
-        telescope = true,
-        treesitter = true,
-        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
-    },
+catppuccin.setup({
+	transparent_background = true,
+	term_colors = true,
+	integrations = {
+		cmp = true,
+		native_lsp = false,
+		telescope = true,
+		treesitter = true,
+		nvimtree = { enabled = true, show_root = true },
+		leap = true,
+    hop = true
+	},
 })
+
+vim.cmd("colorscheme catppuccin")

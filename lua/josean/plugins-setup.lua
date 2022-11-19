@@ -36,7 +36,7 @@ return packer.startup(function(use)
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 	use("frenzyexists/aquarium-vim")
 	use("rmehri01/onenord.nvim")
-  use("catppuccin/nvim")
+	use("catppuccin/nvim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -104,8 +104,20 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
-  -- smooth scroll
-  use("karb94/neoscroll.nvim")
+	-- smooth scroll
+	use("karb94/neoscroll.nvim")
+
+	-- LSP progress bar
+	use("j-hui/fidget.nvim")
+
+	-- rust crates
+	use("saecki/crates.nvim")
+
+	use("ggandor/leap.nvim")
+	use({ "phaazon/hop.nvim", branch = "v2" })
+
+	-- indentation lines
+	use("lukas-reineke/indent-blankline.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()

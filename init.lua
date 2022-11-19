@@ -19,11 +19,15 @@ require("josean.plugins.autopairs")
 require("josean.plugins.treesitter")
 require("josean.plugins.gitsigns")
 require("josean.plugins.rust-tools")
-require("josean.plugins.neoscroll")
+-- require("josean.plugins.neoscroll")
+require("josean.plugins.fidget")
+require("josean.plugins.crates")
+-- require("josean.plugins.leap")
+require("josean.plugins.hop")
+require("josean.plugins.indent-blankline")
 
 vim.api.nvim_create_autocmd("SourcePost", {
 	command = "highlight Normal ctermbg=NONE guibg=NONE \
   highlight LineNr ctermbg=NONE guibg=NONE \
   highlight SignColumn ctermbg=NONE guibg=NONE",
 })
-
