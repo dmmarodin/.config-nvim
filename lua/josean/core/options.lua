@@ -40,3 +40,6 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- mouse
 opt.mouse = "a"
+
+-- file saving
+opt.backupcopy = "yes"
