@@ -27,8 +27,12 @@ keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 
-keymap.set("n", "<leader>p", ":tabn<CR>") --  go to next tab
-keymap.set("n", "<leader>o", ":tabp<CR>") --  go to previous tab
+keymap.set("n", "<leader>l", ":tabn<CR>") --  go to next tab
+keymap.set("n", "<leader>h", ":tabp<CR>") --  go to previous tab
+
+-- Paste register "0
+keymap.set("n", "<leader>v", '"0p')
+keymap.set("i", "<leader>v", "<C-R>0")
 
 ----------------------
 -- Plugin Keybinds
